@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TI 84 Calculator Online – Free Graphing Calculator (November 2026)</title>
+<meta name="description" content="Use a free TI 84 calculator online: TI-84 style keys, Y= editor, graphing with zoom and trace, zeros, intersections, tables and degree/radian mode. Includes keystroke guide, worked examples and FAQ.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="TI 84 Calculator Online – Free Graphing Calculator">
+<meta property="og:description" content="A TI-84 style graphing calculator in your browser with Y=, WINDOW, ZOOM, TRACE, CALC and TABLE, plus a complete how-to guide.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Is this TI 84 calculator free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. This TI 84 calculator runs free in your browser on computers, Chromebooks, tablets and phones, with no download or account."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I graph functions like on a real TI-84?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Enter up to four functions in Y=, set the WINDOW or use ZOOM, then press GRAPH. TRACE lets you move along a curve, and CALC finds values, zeros, intersections, minimums and maximums."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I find the zeros of a function?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Enter the function in Y1, press GRAPH, then 2nd and TRACE to open CALC and choose zero. The calculator lists every zero it finds inside the current window."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I switch between degrees and radians?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Press MODE. The status bar at the top of the screen shows DEGREE or RADIAN. Use DEGREE for most geometry problems and RADIAN for calculus and unit-circle work."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I use an online TI-84 calculator on the SAT or ACT?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Online calculators are not allowed in test rooms. The handheld TI-84 Plus family is accepted on the SAT, ACT and AP exams, so use this page to practise the keystrokes before test day."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between the TI-84 Plus and the TI-84 Plus CE?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The TI-84 Plus CE, released in 2015, is thinner, has a backlit colour screen of 320 × 240 pixels and a rechargeable battery. The TI-84 Plus from 2004 has a monochrome screen and uses AAA batteries. The keys are almost the same."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why does my graph not show up?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Usually the window does not include the curve. Press ZOOM and choose ZStandard, or check that Xmin is less than Xmax and Ymin is less than Ymax. Also check Y= for a syntax error."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does this calculator have statistics and matrices?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "This page focuses on the home screen, graphing and tables. For statistics, regressions, matrices and probability distributions, use the full TI 84 calculator on our main site."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<div class="notice">Independent study tool · not affiliated with or endorsed by Texas Instruments · TI-84 is a trademark of Texas Instruments</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a href="#" class="brand">
+      <span class="b-ic" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="b-txt">TI 84 <b>Calculator</b></span>
+    </a>
+    <button class="hamb" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Main">
+      <a href="#calc">Calculator</a>
+      <a href="#guide">How to Use</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="h-copy">
+      <p class="kick">Free · no download · <span class="cm">November 2026</span></p>
+      <h1>TI 84 Calculator Online: Graph, Trace and Solve in Your Browser</h1>
+      <p class="lead">This free TI 84 calculator works like the handheld you use in class: type on the home screen, enter functions in <b>Y=</b>, set the <b>WINDOW</b>, then <b>GRAPH</b>, <b>TRACE</b> and use <b>CALC</b> to find zeros and intersections. For the full-featured emulator with statistics, matrices and regressions, open the complete <a href="https://ti84calchub.com/">TI 84 Calculator</a>.</p>
+      <ul class="h-list">
+        <li><span>📈</span>Graph up to 4 functions in colour</li>
+        <li><span>🎯</span>Zero, intersect and value at x</li>
+        <li><span>📋</span>Tables with your own start and step</li>
+        <li><span>⌨️</span>Works with your keyboard too</li>
+      </ul>
+    </div>
+
+    <div class="calc" id="calc" aria-label="TI 84 style calculator">
+      <div class="c-brand"><span>TI-84 style</span><em>online</em></div>
+      <div class="screen">
+        <div class="status"><span id="stMode">RADIAN</span><span>REAL</span><span id="stPane">HOME</span><span class="st2" id="st2" hidden>2ND</span></div>
+        <div class="pane" id="pHome"><div class="hist" id="hist"></div><div class="entry"><span id="entry"></span><i class="cur"></i></div></div>
+        <div class="pane yeq" id="pY" hidden></div>
+        <div class="pane win" id="pW" hidden></div>
+        <div class="pane menu" id="pM" hidden></div>
+        <div class="pane gr" id="pG" hidden><canvas id="cv" width="640" height="440" aria-label="Graph"></canvas><div class="g-foot" id="gFoot"></div></div>
+        <div class="pane tb" id="pT" hidden></div>
+      </div>
+      <div class="keys" id="keys"></div>
+    </div>
+  </div>
+</section>
+
+<section class="guide" id="guide">
+  <div class="wrap g-grid">
+    <article class="prose">
+      <h2>How to use this TI 84 calculator online</h2>
+      <p>The TI-84 family from Texas Instruments is the graphing calculator most US students meet in algebra, pre-calculus, statistics and calculus. This online TI 84 calculator copies the parts you use every day, the home screen and the graphing keys, so you can practise the same keystrokes without the handheld in front of you.</p>
+
+      <h3>The keys that matter most</h3>
+      <div class="keymap">
+        <div><kbd>Y=</kbd><p>Type the functions you want to graph: Y1 to Y4. Use <kbd class="s">X,T,θ,n</kbd> for the variable X.</p></div>
+        <div><kbd>WINDOW</kbd><p>Set Xmin, Xmax, Ymin, Ymax and the tick spacing (Xscl, Yscl).</p></div>
+        <div><kbd>ZOOM</kbd><p>Quick windows: ZStandard, ZoomIn, ZoomOut, ZDecimal and ZTrig.</p></div>
+        <div><kbd>TRACE</kbd><p>Move along a curve with the arrow keys and read X and Y.</p></div>
+        <div><kbd>GRAPH</kbd><p>Draw every function that has an expression in Y=.</p></div>
+        <div><kbd class="b">2nd</kbd><p>Uses the blue label above a key: √, π, sin⁻¹, 10ˣ, eˣ, CALC, TABLE, QUIT and more.</p></div>
+        <div><kbd>MODE</kbd><p>Switches between RADIAN and DEGREE for trigonometry.</p></div>
+        <div><kbd class="b">2nd</kbd> + <kbd>TRACE</kbd><p>Opens CALC: value at X, zero and intersect.</p></div>
+      </div>
+
+      <h3>Getting started in 5 steps</h3>
+      <ol>
+        <li>Type a calculation on the home screen, for example <code>2^10</code>, and press <kbd>ENTER</kbd>. The result is stored in <b>Ans</b>.</li>
+        <li>Press <kbd>Y=</kbd> and enter a function such as <code>X²−X−6</code> in Y1.</li>
+        <li>Press <kbd>GRAPH</kbd>. If you see nothing, press <kbd>ZOOM</kbd> and choose <b>ZStandard</b>.</li>
+        <li>Press <kbd>TRACE</kbd> and use ◀ ▶ (or click the graph) to read points on the curve.</li>
+        <li>Press <kbd class="b">2nd</kbd> <kbd>TRACE</kbd> to open CALC and find zeros or intersections.</li>
+      </ol>
+
+      <h3>Worked examples</h3>
+      <div class="exs">
+        <div class="ex"><p class="ex-t">1 · Solve a quadratic</p><p>Enter <code>Y1 = X²−X−6</code>, graph it, then choose <b>CALC → zero</b>. The calculator finds <b>X = −2</b> and <b>X = 3</b>, the two solutions of x² − x − 6 = 0.</p></div>
+        <div class="ex"><p class="ex-t">2 · Where two graphs meet</p><p>Enter <code>Y1 = X²</code> and <code>Y2 = 2X+1</code>. <b>CALC → intersect</b> returns <b>X ≈ −0.414</b> and <b>X ≈ 2.414</b>, which are 1 − √2 and 1 + √2.</p></div>
+        <div class="ex"><p class="ex-t">3 · Trig in degrees</p><p>Press <kbd>MODE</kbd> to switch to DEGREE, then type <code>sin(30)</code>. The answer is <b>0.5</b>. In RADIAN mode the same keys give −0.988, a classic exam mistake.</p></div>
+        <div class="ex"><p class="ex-t">4 · A table of values</p><p>With <code>Y1 = 2X+3</code>, press <kbd class="b">2nd</kbd> <kbd>GRAPH</kbd> for TABLE. Change TblStart and ΔTbl at the top to list the values you need.</p></div>
+      </div>
+
+      <h3>TI-84 keystroke cheat sheet</h3>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>To get…</th><th>Press</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Square root</td><td><kbd class="b">2nd</kbd> <kbd>x²</kbd></td><td><code>√(144)</code> = 12</td></tr>
+            <tr><td>π</td><td><kbd class="b">2nd</kbd> <kbd>^</kbd></td><td><code>2π</code> = 6.283185307</td></tr>
+            <tr><td>Inverse sine</td><td><kbd class="b">2nd</kbd> <kbd>sin</kbd></td><td><code>sin⁻¹(0.5)</code> = 30 in DEGREE</td></tr>
+            <tr><td>eˣ</td><td><kbd class="b">2nd</kbd> <kbd>ln</kbd></td><td><code>e^(1)</code> = 2.718281828</td></tr>
+            <tr><td>10ˣ</td><td><kbd class="b">2nd</kbd> <kbd>log</kbd></td><td><code>10^(3)</code> = 1000</td></tr>
+            <tr><td>Negative number</td><td><kbd>(−)</kbd></td><td><code>−5+2</code> = −3</td></tr>
+            <tr><td>Last answer</td><td><kbd class="b">2nd</kbd> <kbd>(−)</kbd></td><td><code>Ans×2</code></td></tr>
+            <tr><td>Last entry</td><td><kbd class="b">2nd</kbd> <kbd>ENTER</kbd></td><td>recalls your last line</td></tr>
+            <tr><td>Back to home</td><td><kbd class="b">2nd</kbd> <kbd>MODE</kbd></td><td>QUIT</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>TI-84 Plus, TI-84 Plus CE and TI-83 Plus</h3>
+      <p>The <b>TI-83 Plus</b> (1999) set the standard for classroom graphing. The <b>TI-84 Plus</b> (2004) kept the same key layout and added more memory and a USB port. The <b>TI-84 Plus CE</b> (2015) is the version most students buy today: it is thinner, has a rechargeable battery and a backlit colour screen of 320 × 240 pixels. Because the keys are almost identical, what you learn on one model carries over to the others, and to this online TI 84 calculator.</p>
+
+      <h3>Can you use a TI-84 on tests?</h3>
+      <p>The handheld TI-84 Plus family is accepted on the calculator sections of major tests such as the SAT, the ACT and AP math and science exams, but always check the current rules for your exam. Online calculators like this one are <b>not</b> allowed in test rooms; use this page for homework, revision and to learn the keystrokes before exam day.</p>
+
+      <h3>When a scientific calculator is enough</h3>
+      <p>Not every class needs graphing. If your course or exam only allows scientific calculators, try the <a href="https://ti84calchub.com/ti-30xs-calculator/">TI-30XS calculator</a>, which has a four-line MultiView display with stacked fractions, or the classic one-line <a href="https://ti84calchub.com/ti-30xa-calculator/">TI-30XA calculator</a> with its a b/c fraction key and Σ+ statistics. Both are great for fractions, percentages, trigonometry and quick statistics.</p>
+
+      <h3>Troubleshooting</h3>
+      <ul>
+        <li><b>The graph is empty.</b> Your window may not show the curve. Use ZOOM → ZStandard, or check Ymin and Ymax.</li>
+        <li><b>ERR:SYNTAX.</b> Look for a missing parenthesis, two operators in a row, or a subtraction key used where you meant <kbd>(−)</kbd>.</li>
+        <li><b>Wrong trig answers.</b> Check the status bar: DEGREE or RADIAN must match your problem.</li>
+        <li><b>ERR:DOMAIN.</b> You asked for something undefined, such as √(−4) or log(0) in real mode.</li>
+      </ul>
+    </article>
+    <aside class="side">
+      <div class="s-card">
+        <p class="s-h">Keyboard shortcuts</p>
+        <ul>
+          <li><kbd>0–9 . + − * / ^ ( )</kbd> type</li>
+          <li><kbd>Enter</kbd> ENTER</li>
+          <li><kbd>Backspace</kbd> DEL</li>
+          <li><kbd>Esc</kbd> CLEAR</li>
+          <li><kbd>x</kbd> variable X</li>
+          <li><kbd>← →</kbd> move TRACE</li>
+          <li><kbd>↑ ↓</kbd> change traced Y</li>
+        </ul>
+      </div>
+      <div class="s-card blue">
+        <p class="s-h">Quick facts</p>
+        <dl>
+          <dt>Functions</dt><dd>Y1–Y4</dd>
+          <dt>Modes</dt><dd>RADIAN / DEGREE</dd>
+          <dt>CALC</dt><dd>value, zero, intersect</dd>
+          <dt>Saves</dt><dd>Y= and WINDOW in your browser</dd>
+          <dt>Price</dt><dd>Free</dd>
+        </dl>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap faq-in">
+    <h2>TI 84 calculator FAQ</h2>
+    <details open><summary>Is this TI 84 calculator free?</summary><p>Yes. This TI 84 calculator runs free in your browser on computers, Chromebooks, tablets and phones, with no download or account.</p></details>
+    <details><summary>Can I graph functions like on a real TI-84?</summary><p>Yes. Enter up to four functions in Y=, set the WINDOW or use ZOOM, then press GRAPH. TRACE lets you move along a curve, and CALC finds values, zeros, intersections, minimums and maximums.</p></details>
+    <details><summary>How do I find the zeros of a function?</summary><p>Enter the function in Y1, press GRAPH, then 2nd and TRACE to open CALC and choose zero. The calculator lists every zero it finds inside the current window.</p></details>
+    <details><summary>How do I switch between degrees and radians?</summary><p>Press MODE. The status bar at the top of the screen shows DEGREE or RADIAN. Use DEGREE for most geometry problems and RADIAN for calculus and unit-circle work.</p></details>
+    <details><summary>Can I use an online TI-84 calculator on the SAT or ACT?</summary><p>No. Online calculators are not allowed in test rooms. The handheld TI-84 Plus family is accepted on the SAT, ACT and AP exams, so use this page to practise the keystrokes before test day.</p></details>
+    <details><summary>What is the difference between the TI-84 Plus and the TI-84 Plus CE?</summary><p>The TI-84 Plus CE, released in 2015, is thinner, has a backlit colour screen of 320 × 240 pixels and a rechargeable battery. The TI-84 Plus from 2004 has a monochrome screen and uses AAA batteries. The keys are almost the same.</p></details>
+    <details><summary>Why does my graph not show up?</summary><p>Usually the window does not include the curve. Press ZOOM and choose ZStandard, or check that Xmin is less than Xmax and Ymin is less than Ymax. Also check Y= for a syntax error.</p></details>
+    <details><summary>Does this calculator have statistics and matrices?</summary><p>This page focuses on the home screen, graphing and tables. For statistics, regressions, matrices and probability distributions, use the full TI 84 calculator on our main site.</p></details>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="#" class="brand"><span class="b-ic" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="b-txt">TI 84 <b>Calculator</b></span></a>
+    <p>This page is an independent learning tool. It is not affiliated with, sponsored by or endorsed by Texas Instruments. TI-84, TI-83, TI-30XS and TI-30XA are trademarks of Texas Instruments. Results are for study purposes; always check important answers.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  var tt; function toast(m){ var e=$('toast'); e.textContent=m; e.hidden=false; clearTimeout(tt); tt=setTimeout(function(){e.hidden=true;},1800); }
+  function store(k,v){ try{ if(v===undefined) return JSON.parse(localStorage.getItem(k)); localStorage.setItem(k,JSON.stringify(v)); }catch(e){ return null; } }
+  try{ var lab=new Date().toLocaleDateString('en-US',{month:'long',year:'numeric'});
+    document.querySelectorAll('.cm').forEach(function(e){ e.textContent=lab; });
+    document.title=document.title.replace(/\([A-Za-z]+ \d{4}\)/,'('+lab+')'); }catch(e){}
+
+  /* ================= math engine ================= */
+  function Err(m){ this.m=m; }
+  var FN=['sin⁻¹','cos⁻¹','tan⁻¹','sin','cos','tan','ln','log','√','abs'];
+  var ALIAS={asin:'sin⁻¹',acos:'cos⁻¹',atan:'tan⁻¹',sqrt:'√'};
+  function tokenize(s){
+    s=s.replace(/\s+/g,'');
+    var T=[], i=0, m;
+    while(i<s.length){
+      var r=s.slice(i);
+      if((m=r.match(/^(\d+\.?\d*|\.\d+)(E[−-]?\d+)?/))){ T.push({t:'n',v:parseFloat(m[0].replace('−','-'))}); i+=m[0].length; continue; }
+      if((m=r.match(/^(asin|acos|atan|sqrt)/))){ T.push({t:'f',v:ALIAS[m[0]]}); i+=m[0].length; continue; }
+      var f=null; for(var k=0;k<FN.length;k++){ if(r.indexOf(FN[k])===0){ f=FN[k]; break; } }
+      if(f){ T.push({t:'f',v:f}); i+=f.length; continue; }
+      if(r.indexOf('Ans')===0){ T.push({t:'v',v:'Ans'}); i+=3; continue; }
+      if(r.indexOf('⁻¹')===0){ T.push({t:'o',v:'inv'}); i+=2; continue; }
+      var c=s[i];
+      if(c==='π'){ T.push({t:'k',v:Math.PI}); i++; continue; }
+      if(c==='e'){ T.push({t:'k',v:Math.E}); i++; continue; }
+      if(c==='X'||c==='x'){ T.push({t:'v',v:'X'}); i++; continue; }
+      var map={'+':'+','-':'-','−':'neg','*':'*','×':'*','/':'/','÷':'/','^':'^','!':'!','²':'sq','(':'(',')':')'};
+      if(map[c]){ T.push({t:'o',v:map[c]}); i++; continue; }
+      throw new Err('SYNTAX');
+    }
+    return T;
+  }
+  function compile(src){
+    var T=tokenize(src), p=0;
+    if(!T.length) throw new Err('SYNTAX');
+    function pk(){ return T[p]; }
+    function is(v){ var t=T[p]; return t&&t.t==='o'&&t.v===v; }
+    function startsPrimary(){ var t=T[p]; return t&&(t.t==='n'||t.t==='k'||t.t==='v'||t.t==='f'||(t.t==='o'&&t.v==='(')); }
+    function expr(){
+      var a=term();
+      while(is('+')||is('-')||is('neg')){ var op=T[p++].v; if(op==='neg') op='-'; var b=term(); a=(function(a,b,op){ return op==='+'?function(E){return a(E)+b(E);}:function(E){return a(E)-b(E);}; })(a,b,op); }
+      return a;
+    }
+    function term(){
+      var a=unary();
+      for(;;){
+        if(is('*')||is('/')){ var op=T[p++].v, b=unary(); a=(function(a,b,op){ return op==='*'?function(E){return a(E)*b(E);}:function(E){ var d=b(E); if(d===0) throw new Err('DIVIDE BY 0'); return a(E)/d; }; })(a,b,op); }
+        else if(startsPrimary()){ var c=unary(); a=(function(a,c){ return function(E){return a(E)*c(E);}; })(a,c); }
+        else break;
+      }
+      return a;
+    }
+    function unary(){
+      if(is('-')||is('neg')){ p++; var u=unary(); return function(E){return -u(E);}; }
+      return power();
+    }
+    function power(){
+      var b=postfix();
+      while(is('^')){
+        p++; var neg=false; while(is('-')||is('neg')){ p++; neg=!neg; }
+        var e=postfix(), bb=b, n=neg;
+        b=function(E){ var x=bb(E), y=e(E); if(n) y=-y; var r=Math.pow(x,y); if(x<0&&Math.abs(y)<1&&!Number.isInteger(y)){ var q=Math.round(1/y); if(Math.abs(1/y-q)<1e-9&&q%2) r=-Math.pow(-x,y); } return r; };
+      }
+      return b;
+    }
+    function postfix(){
+      var v=primary();
+      for(;;){
+        if(is('!')){ p++; v=(function(v){ return function(E){ var n=v(E); if(n<0||n>170||!Number.isInteger(Math.round(n*1e9)/1e9)) throw new Err('DOMAIN'); n=Math.round(n); var r=1; for(var i=2;i<=n;i++) r*=i; return r; }; })(v); }
+        else if(is('sq')){ p++; v=(function(v){ return function(E){ var x=v(E); return x*x; }; })(v); }
+        else if(is('inv')){ p++; v=(function(v){ return function(E){ var x=v(E); if(x===0) throw new Err('DIVIDE BY 0'); return 1/x; }; })(v); }
+        else break;
+      }
+      return v;
+    }
+    function group(){ p++; var e=expr(); if(is(')')) p++; else if(p<T.length) throw new Err('SYNTAX'); return e; }
+    function primary(){
+      var t=pk(); if(!t) throw new Err('SYNTAX');
+      if(t.t==='n'){ p++; var n=t.v; return function(){return n;}; }
+      if(t.t==='k'){ p++; var k=t.v; return function(){return k;}; }
+      if(t.t==='v'){ p++; var nm=t.v; return function(E){ return E[nm]; }; }
+      if(t.t==='o'&&t.v==='(') return group();
+      if(t.t==='f'){
+        p++; var arg=is('(')?group():power(), F=t.v;
+        return function(E){
+          var x=arg(E), d=E.deg?Math.PI/180:1;
+          switch(F){
+            case 'sin': return Math.abs(Math.sin(x*d))<1e-15?0:Math.sin(x*d);
+            case 'cos': return Math.abs(Math.cos(x*d))<1e-15?0:Math.cos(x*d);
+            case 'tan': var c=Math.cos(x*d); if(Math.abs(c)<1e-15) throw new Err('DOMAIN'); return Math.tan(x*d);
+            case 'sin⁻¹': if(x<-1||x>1) throw new Err('DOMAIN'); return Math.asin(x)/d;
+            case 'cos⁻¹': if(x<-1||x>1) throw new Err('DOMAIN'); return Math.acos(x)/d;
+            case 'tan⁻¹': return Math.atan(x)/d;
+            case 'ln': if(x<=0) throw new Err('DOMAIN'); return Math.log(x);
+            case 'log': if(x<=0) throw new Err('DOMAIN'); return Math.log10(x);
+            case '√': if(x<0) throw new Err('DOMAIN'); return Math.sqrt(x);
+            case 'abs': return Math.abs(x);
+          }
+        };
+      }
+      throw new Err('SYNTAX');
+    }
+    var f=expr();
+    if(p<T.length) throw new Err('SYNTAX');
+    return function(E){ var v=f(E); if(isNaN(v)) throw new Err('DOMAIN'); if(!isFinite(v)) throw new Err('OVERFLOW'); return v; };
+  }
+  function fmt(v){
+    if(v===0) return '0';
+    var a=Math.abs(v), s;
+    if(a>=1e10||a<1e-3){ var m=v.toExponential(9).split('e'); s=String(parseFloat(m[0]))+'E'+parseInt(m[1],10); }
+    else s=String(parseFloat(v.toPrecision(10)));
+    return s.replace(/-/g,'−');
+  }
+  window.TI84={compile:compile,fmt:fmt,Err:Err};
+
+  /* ================= state ================= */
+  var COLORS=['#1f63d1','#e0262f','#111','#c21bb0'];
+  var saved=store('ti84-web2')||{};
+  var ST={deg:!!saved.deg, Y:saved.Y||['','','',''], W:saved.W||{xmin:-10,xmax:10,xscl:1,ymin:-10,ymax:10,yscl:1}, tbl:saved.tbl||{start:0,step:1}};
+  var pane='home', second=false, entry='', hist=[], ans=0, last='', X=0, yFocus=0, trace=null, marks=[], menu=null, pending=null;
+  function save(){ store('ti84-web2',{deg:ST.deg,Y:ST.Y,W:ST.W,tbl:ST.tbl}); }
+  function env(x){ return {X:x===undefined?X:x, Ans:ans, deg:ST.deg}; }
+
+  /* ================= panes ================= */
+  var PANES={home:'pHome',yeq:'pY',win:'pW',menu:'pM',graph:'pG',table:'pT'};
+  var LABEL={home:'HOME',yeq:'Y=',win:'WINDOW',menu:'MENU',graph:'GRAPH',table:'TABLE'};
+  function show(p){
+    pane=p; Object.keys(PANES).forEach(function(k){ $(PANES[k]).hidden=k!==p; });
+    $('stPane').textContent=p==='menu'&&menu?menu.title:LABEL[p];
+    if(p==='yeq') drawY(); if(p==='win') drawW(); if(p==='graph') drawGraph(); if(p==='table') drawT(); if(p==='home') drawHome();
+  }
+  function setSecond(v){ second=v; $('st2').hidden=!v; $('keys').classList.toggle('sec',v); }
+  function setMode(){ $('stMode').textContent=ST.deg?'DEGREE':'RADIAN'; }
+
+  /* home */
+  function drawHome(){
+    $('hist').innerHTML=hist.slice(-12).map(function(h){ return '<p class="hq">'+esc(h[0])+'</p><p class="ha'+(h[2]?' err':'')+'">'+esc(h[1])+'</p>'; }).join('');
+    $('entry').textContent=entry;
+    var s=$('pHome'); s.scrollTop=s.scrollHeight;
+  }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function evalEntry(){
+    var src=entry;
+    if(!src.trim()){ if(last){ src=last; } else return; }
+    if(/^[+*/^²×÷!]|^⁻¹/.test(src)) src='Ans'+src;
+    try{ var v=compile(src)(env()); ans=v; hist.push([src,fmt(v)]); }
+    catch(e){ if(!(e instanceof Err)) e=new Err('SYNTAX'); hist.push([src,'ERR:'+e.m,1]); }
+    last=src; entry=''; drawHome();
+  }
+  /* Y= */
+  function drawY(){
+    $('pY').innerHTML=ST.Y.map(function(y,i){ return '<label class="yrow"><span class="yl"><i style="background:'+COLORS[i]+'"></i>Y'+(i+1)+'=</span><input type="text" data-i="'+i+'" value="'+esc(y)+'" spellcheck="false" autocomplete="off" aria-label="Y'+(i+1)+'"></label>'; }).join('')+'<p class="phint">Use X for the variable. Press GRAPH to draw.</p>';
+    $('pY').querySelectorAll('input').forEach(function(inp){
+      inp.addEventListener('focus',function(){ yFocus=+inp.dataset.i; });
+      inp.addEventListener('input',function(){ ST.Y[+inp.dataset.i]=inp.value; save(); });
+      inp.addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); var n=$('pY').querySelectorAll('input')[(+inp.dataset.i+1)%4]; n.focus(); } });
+    });
+  }
+  /* WINDOW */
+  var WF=[['xmin','Xmin'],['xmax','Xmax'],['xscl','Xscl'],['ymin','Ymin'],['ymax','Ymax'],['yscl','Yscl']];
+  function drawW(){
+    $('pW').innerHTML='<p class="wh">WINDOW</p>'+WF.map(function(f){ return '<label class="wrow"><span>'+f[1]+'=</span><input type="text" inputmode="decimal" data-k="'+f[0]+'" value="'+fmt(ST.W[f[0]]).replace(/−/g,'-')+'"></label>'; }).join('');
+    $('pW').querySelectorAll('input').forEach(function(inp){
+      inp.addEventListener('focus',function(){ yFocus=-1; });
+      inp.addEventListener('change',function(){
+        try{ var v=compile(inp.value)(env()); ST.W[inp.dataset.k]=v; }catch(e){ toast('Invalid value'); }
+        if(ST.W.xmin>=ST.W.xmax||ST.W.ymin>=ST.W.ymax){ toast('ERR:WINDOW RANGE – min must be less than max'); }
+        save(); inp.value=fmt(ST.W[inp.dataset.k]).replace(/−/g,'-');
+      });
+    });
+  }
+  /* MENU */
+  function openMenu(title,items){ menu={title:title,items:items}; $('pM').innerHTML='<p class="mh">'+title+'</p>'+items.map(function(it,i){ return '<button type="button" data-i="'+i+'"><b>'+(i+1)+':</b>'+it[0]+'</button>'; }).join(''); $('pM').querySelectorAll('button').forEach(function(b){ b.addEventListener('click',function(){ pick(+b.dataset.i); }); }); show('menu'); }
+  function pick(i){ if(!menu||!menu.items[i]) return; var f=menu.items[i][1]; menu=null; f(); }
+  function zoom(fn){ fn(); save(); trace=null; marks=[]; show('graph'); }
+  var ZOOM=[
+    ['ZStandard',function(){ zoom(function(){ ST.W={xmin:-10,xmax:10,xscl:1,ymin:-10,ymax:10,yscl:1}; }); }],
+    ['Zoom In',function(){ zoom(function(){ scaleW(0.5); }); }],
+    ['Zoom Out',function(){ zoom(function(){ scaleW(2); }); }],
+    ['ZDecimal',function(){ zoom(function(){ ST.W={xmin:-6.6,xmax:6.6,xscl:1,ymin:-4.1,ymax:4.1,yscl:1}; }); }],
+    ['ZTrig',function(){ zoom(function(){ ST.W=ST.deg?{xmin:-360,xmax:360,xscl:90,ymin:-4,ymax:4,yscl:1}:{xmin:-2*Math.PI,xmax:2*Math.PI,xscl:Math.PI/2,ymin:-4,ymax:4,yscl:1}; }); }],
+    ['ZSquare',function(){ zoom(function(){ var W=ST.W, cy=(W.ymin+W.ymax)/2, h=(W.xmax-W.xmin)*(GH/GW)/2; W.ymin=cy-h; W.ymax=cy+h; }); }]
+  ];
+  function scaleW(k){ var W=ST.W, cx=(W.xmin+W.xmax)/2, cy=(W.ymin+W.ymax)/2, hx=(W.xmax-W.xmin)/2*k, hy=(W.ymax-W.ymin)/2*k; W.xmin=cx-hx; W.xmax=cx+hx; W.ymin=cy-hy; W.ymax=cy+hy; }
+  var CALC=[
+    ['value',function(){ pending={type:'value'}; show('graph'); }],
+    ['zero',function(){ pending=null; doZero(); }],
+    ['intersect',function(){ pending=null; doIntersect(); }],
+    ['minimum',function(){ pending=null; doExt(false); }],
+    ['maximum',function(){ pending=null; doExt(true); }]
+  ];
+
+  /* ================= graph ================= */
+  var GW=320, GH=220, cv=$('cv'), ctx=cv.getContext('2d');
+  ctx.scale(2,2);
+  function funcs(){ var out=[]; ST.Y.forEach(function(y,i){ if(y.trim()){ try{ out.push({i:i,f:compile(y),src:y}); }catch(e){ out.push({i:i,err:true,src:y}); } } }); return out; }
+  function val(F,x){ try{ return F.f(env(x)); }catch(e){ return NaN; } }
+  function px(x){ var W=ST.W; return (x-W.xmin)/(W.xmax-W.xmin)*GW; }
+  function py(y){ var W=ST.W; return GH-(y-W.ymin)/(W.ymax-W.ymin)*GH; }
+  function xAt(pxv){ var W=ST.W; return W.xmin+pxv/GW*(W.xmax-W.xmin); }
+  function drawGraph(){
+    var W=ST.W; ctx.clearRect(0,0,GW,GH); ctx.fillStyle='#fff'; ctx.fillRect(0,0,GW,GH);
+    if(!(W.xmin<W.xmax&&W.ymin<W.ymax)){ ctx.fillStyle='#c00'; ctx.font='12px monospace'; ctx.fillText('ERR:WINDOW RANGE',90,110); foot(); return; }
+    ctx.strokeStyle='#bbb'; ctx.lineWidth=1;
+    var tx=(W.xmax-W.xmin)/W.xscl, ty=(W.ymax-W.ymin)/W.yscl, oy=Math.min(GH,Math.max(0,py(0))), ox=Math.min(GW,Math.max(0,px(0)));
+    ctx.beginPath();
+    if(W.xscl>0&&tx<=80){ for(var x=Math.ceil(W.xmin/W.xscl)*W.xscl;x<=W.xmax;x+=W.xscl){ var X1=px(x); ctx.moveTo(X1,oy-3); ctx.lineTo(X1,oy+3); } }
+    if(W.yscl>0&&ty<=80){ for(var y=Math.ceil(W.ymin/W.yscl)*W.yscl;y<=W.ymax;y+=W.yscl){ var Y1=py(y); ctx.moveTo(ox-3,Y1); ctx.lineTo(ox+3,Y1); } }
+    ctx.stroke();
+    ctx.strokeStyle='#222'; ctx.beginPath();
+    if(W.ymin<=0&&W.ymax>=0){ ctx.moveTo(0,py(0)); ctx.lineTo(GW,py(0)); }
+    if(W.xmin<=0&&W.xmax>=0){ ctx.moveTo(px(0),0); ctx.lineTo(px(0),GH); }
+    ctx.stroke();
+    var F=funcs(), errs=[];
+    F.forEach(function(fn){
+      if(fn.err){ errs.push('Y'+(fn.i+1)); return; }
+      ctx.strokeStyle=COLORS[fn.i]; ctx.lineWidth=2; ctx.beginPath();
+      var pen=false, prev=null, N=GW*2;
+      for(var k=0;k<=N;k++){
+        var xx=W.xmin+k/N*(W.xmax-W.xmin), yy=val(fn,xx);
+        if(!isFinite(yy)){ pen=false; prev=null; continue; }
+        var Y=py(yy);
+        if(prev!==null&&Math.abs(Y-prev)>GH*1.5){ pen=false; }
+        Y=Math.max(-GH,Math.min(2*GH,Y));
+        if(!pen){ ctx.moveTo(k/2,Y); pen=true; } else ctx.lineTo(k/2,Y);
+        prev=Y;
+      }
+      ctx.stroke();
+    });
+    marks.forEach(function(m){ ctx.fillStyle='#000'; ctx.beginPath(); ctx.arc(px(m[0]),py(m[1]),3.5,0,7); ctx.fill(); });
+    if(trace){
+      var tf=F.filter(function(f){return f.i===trace.i&&!f.err;})[0];
+      if(tf){ var ty2=val(tf,trace.x); if(isFinite(ty2)){ var cx=px(trace.x), cy=py(ty2); ctx.strokeStyle=COLORS[tf.i]; ctx.lineWidth=1.5; ctx.beginPath(); ctx.moveTo(cx-7,cy); ctx.lineTo(cx+7,cy); ctx.moveTo(cx,cy-7); ctx.lineTo(cx,cy+7); ctx.stroke(); ctx.strokeRect(cx-3,cy-3,6,6); } }
+    }
+    if(errs.length){ ctx.fillStyle='#c00'; ctx.font='11px monospace'; ctx.fillText('ERR:SYNTAX in '+errs.join(', '),6,14); }
+    if(!F.length){ ctx.fillStyle='#666'; ctx.font='12px sans-serif'; ctx.fillText('Press Y= and enter a function',80,GH/2-14); }
+    foot();
+  }
+  function foot(info){
+    var h='';
+    if(pending&&pending.type==='value'){ h='<div class="gf-in"><label>X=<input type="text" id="vX" inputmode="decimal" value="'+fmt(trace?trace.x:0).replace(/−/g,'-')+'"></label><button type="button" id="vGo">ENTER</button></div>'; }
+    else if(trace){
+      var F=funcs().filter(function(f){return !f.err;}), tf=F.filter(function(f){return f.i===trace.i;})[0];
+      if(tf){ var y=val(tf,trace.x); h='<div class="gf-tr"><span style="color:'+COLORS[tf.i]+'">Y'+(tf.i+1)+'='+esc(tf.src)+'</span><span>X='+fmt(trace.x)+'</span><span>Y='+(isFinite(y)?fmt(y):'undef')+'</span></div><div class="gf-b"><button type="button" data-a="l">◀</button><button type="button" data-a="u">▲ Y</button><button type="button" data-a="r">▶</button><button type="button" data-a="q">✕</button></div>'; }
+    }
+    if(info) h='<div class="gf-res">'+info+'</div>'+h;
+    $('gFoot').innerHTML=h;
+    var vg=$('vGo'); if(vg){ var go=function(){ try{ var x=compile($('vX').value)(env()); var F=funcs().filter(function(f){return !f.err;}); if(!F.length){ toast('No function in Y='); return; } trace={i:F[0].i,x:x}; pending=null; var y=val(F[0],x); marks=[[x,y]]; drawGraph(); foot('Y'+(F[0].i+1)+'('+fmt(x)+') = <b>'+(isFinite(y)?fmt(y):'undefined')+'</b>'); }catch(e){ toast('Invalid X'); } }; vg.addEventListener('click',go); $('vX').addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); go(); } }); }
+    $('gFoot').querySelectorAll('.gf-b button').forEach(function(b){ b.addEventListener('click',function(){ traceKey(b.dataset.a); }); });
+  }
+  function startTrace(){
+    var F=funcs().filter(function(f){return !f.err;});
+    if(!F.length){ toast('Enter a function in Y= first'); show('yeq'); return; }
+    trace={i:F[0].i,x:(ST.W.xmin+ST.W.xmax)/2}; pending=null; show('graph');
+  }
+  function traceKey(a){
+    if(!trace) return;
+    var F=funcs().filter(function(f){return !f.err;}); if(!F.length) return;
+    var step=(ST.W.xmax-ST.W.xmin)/94;
+    if(a==='l') trace.x=Math.max(ST.W.xmin,trace.x-step);
+    if(a==='r') trace.x=Math.min(ST.W.xmax,trace.x+step);
+    if(a==='u'||a==='d'){ var idx=F.map(function(f){return f.i;}), k=idx.indexOf(trace.i); trace.i=idx[(k+(a==='u'?1:idx.length-1))%idx.length]; }
+    if(a==='q'){ trace=null; }
+    drawGraph();
+  }
+  cv.addEventListener('click',function(e){
+    var r=cv.getBoundingClientRect(), x=xAt((e.clientX-r.left)/r.width*GW);
+    var F=funcs().filter(function(f){return !f.err;}); if(!F.length) return;
+    if(!trace) trace={i:F[0].i,x:x}; else trace.x=x;
+    drawGraph();
+  });
+  /* CALC */
+  function roots(g,a,b){
+    var N=600, out=[], x0=a, y0=g(a);
+    for(var k=1;k<=N;k++){
+      var x1=a+(b-a)*k/N, y1=g(x1);
+      if(isFinite(y0)&&isFinite(y1)){
+        if(y0===0){ out.push(x0); }
+        else if(y0*y1<0){
+          var lo=x0, hi=x1, fl=y0;
+          for(var it=0;it<80;it++){ var mid=(lo+hi)/2, fm=g(mid); if(!isFinite(fm)) break; if(fl*fm<=0) hi=mid; else { lo=mid; fl=fm; } }
+          var r=(lo+hi)/2, fr=g(r);
+          if(isFinite(fr)&&Math.abs(fr)<1e-6*(1+Math.abs(y0)+Math.abs(y1))) out.push(r);
+        }
+      }
+      x0=x1; y0=y1;
+    }
+    var u=[]; out.forEach(function(r){ if(!u.some(function(v){return Math.abs(v-r)<(b-a)*1e-6;})) u.push(Math.abs(r)<1e-12?0:r); });
+    return u;
+  }
+  function doZero(){
+    var F=funcs().filter(function(f){return !f.err;}); if(!F.length){ toast('Enter a function in Y= first'); show('yeq'); return; }
+    var fn=F.filter(function(f){return trace&&f.i===trace.i;})[0]||F[0];
+    var R=roots(function(x){return val(fn,x);},ST.W.xmin,ST.W.xmax);
+    marks=R.map(function(x){return [x,0];}); trace=R.length?{i:fn.i,x:R[0]}:null; pane='graph'; show('graph');
+    foot('<b>Zero of Y'+(fn.i+1)+'</b>: '+(R.length?R.slice(0,6).map(function(x){return 'X='+fmt(x);}).join(' · '):'none in this window')+(R.length>6?' …':''));
+  }
+  function doIntersect(){
+    var F=funcs().filter(function(f){return !f.err;}); if(F.length<2){ toast('Intersect needs two functions in Y='); show('yeq'); return; }
+    var a=F[0], b=F[1], R=roots(function(x){return val(a,x)-val(b,x);},ST.W.xmin,ST.W.xmax);
+    marks=R.map(function(x){return [x,val(a,x)];}); trace=R.length?{i:a.i,x:R[0]}:null; show('graph');
+    foot('<b>Y'+(a.i+1)+' ∩ Y'+(b.i+1)+'</b>: '+(R.length?R.slice(0,4).map(function(x){return '('+fmt(x)+', '+fmt(val(a,x))+')';}).join(' · '):'no intersection in this window'));
+  }
+  function doExt(isMax){
+    var F=funcs().filter(function(f){return !f.err;}); if(!F.length){ toast('Enter a function in Y= first'); show('yeq'); return; }
+    var fn=F.filter(function(f){return trace&&f.i===trace.i;})[0]||F[0], W=ST.W, N=800, best=null;
+    for(var k=0;k<=N;k++){ var x=W.xmin+(W.xmax-W.xmin)*k/N, y=val(fn,x); if(isFinite(y)&&(best===null||(isMax?y>best[1]:y<best[1]))) best=[x,y]; }
+    if(best){ var h=(W.xmax-W.xmin)/N, lo=Math.max(W.xmin,best[0]-h), hi=Math.min(W.xmax,best[0]+h);
+      for(var it=0;it<80;it++){ var m1=lo+(hi-lo)/3, m2=hi-(hi-lo)/3, f1=val(fn,m1), f2=val(fn,m2); if(isMax?f1<f2:f1>f2) lo=m1; else hi=m2; }
+      var xr=(lo+hi)/2, yr=val(fn,xr); for(var dg=0;dg<=9;dg++){ var xc=Math.round(xr*Math.pow(10,dg))/Math.pow(10,dg), yc=val(fn,xc); if(isFinite(yc)&&Math.abs(yc-yr)<=1e-10*(1+Math.abs(yr))&&(isMax?yc>=yr-1e-12:yc<=yr+1e-12)){ xr=xc; yr=yc; break; } } best=[xr,yr]; }
+    marks=best?[best]:[]; trace=best?{i:fn.i,x:best[0]}:null; show('graph');
+    foot('<b>'+(isMax?'Maximum':'Minimum')+' of Y'+(fn.i+1)+'</b> in window: '+(best?'X='+fmt(best[0])+', Y='+fmt(best[1]):'none'));
+  }
+
+  /* ================= table ================= */
+  function drawT(){
+    var F=funcs();
+    var h='<div class="tset"><label>TblStart=<input type="text" id="tS" inputmode="decimal" value="'+fmt(ST.tbl.start).replace(/−/g,'-')+'"></label><label>ΔTbl=<input type="text" id="tD" inputmode="decimal" value="'+fmt(ST.tbl.step).replace(/−/g,'-')+'"></label></div>';
+    if(!F.length) h+='<p class="phint">Enter a function in Y= to see its table.</p>';
+    else{
+      h+='<table><thead><tr><th>X</th>'+F.map(function(f){return '<th style="color:'+COLORS[f.i]+'">Y'+(f.i+1)+'</th>';}).join('')+'</tr></thead><tbody>';
+      for(var r=0;r<10;r++){ var x=ST.tbl.start+r*ST.tbl.step; x=parseFloat(x.toPrecision(12)); h+='<tr><td>'+fmt(x)+'</td>'+F.map(function(f){ if(f.err) return '<td>ERROR</td>'; var y=val(f,x); return '<td>'+(isFinite(y)?fmt(y):'ERROR')+'</td>'; }).join('')+'</tr>'; }
+      h+='</tbody></table>';
+    }
+    $('pT').innerHTML=h;
+    [['tS','start'],['tD','step']].forEach(function(p){ var inp=$(p[0]); inp.addEventListener('focus',function(){ yFocus=-1; }); inp.addEventListener('change',function(){ try{ var v=compile(inp.value)(env()); if(p[1]==='step'&&v===0) throw 0; ST.tbl[p[1]]=v; save(); }catch(e){ toast('Invalid value'); } drawT(); }); });
+  }
+
+  /* ================= keypad ================= */
+  // [label, action, 2nd label, 2nd action, class]
+  var K=[
+    [['Y=','yeq','STAT PLOT',null,'top'],['WINDOW','win','TBLSET','tblset','top'],['ZOOM','zoom','FORMAT',null,'top'],['TRACE','trace','CALC','calc','top'],['GRAPH','graph','TABLE','table','top']],
+    [['2nd','2nd',null,null,'second'],['MODE','mode','QUIT','quit','dark'],['DEL','del','INS',null,'dark'],['CLEAR','clear','',null,'dark'],['X,T,θ,n','i:X','LINK',null,'dark']],
+    [['x²','i:²','√','i:√(','dark'],['^','i:^','π','i:π','dark'],['sin','i:sin(','sin⁻¹','i:sin⁻¹(','dark'],['cos','i:cos(','cos⁻¹','i:cos⁻¹(','dark'],['tan','i:tan(','tan⁻¹','i:tan⁻¹(','dark']],
+    [['x⁻¹','i:⁻¹','abs','i:abs(','dark'],['log','i:log(','10ˣ','i:10^(','dark'],['ln','i:ln(','eˣ','i:e^(','dark'],['(','i:(','{',null,'dark'],[')','i:)','}',null,'dark']],
+    [['!','i:!','',null,'dark'],['7','i:7','',null,'num'],['8','i:8','',null,'num'],['9','i:9','',null,'num'],['÷','i:÷','e','i:e','op']],
+    [['EE','i:E','',null,'dark'],['4','i:4','',null,'num'],['5','i:5','',null,'num'],['6','i:6','',null,'num'],['×','i:×','[',null,'op']],
+    [['◀','left','',null,'dark'],['1','i:1','',null,'num'],['2','i:2','',null,'num'],['3','i:3','',null,'num'],['−','i:-',']',null,'op']],
+    [['▶','right','',null,'dark'],['0','i:0','CATALOG',null,'num'],['.','i:.','i',null,'num'],['(−)','i:−','ANS','i:Ans','num'],['+','i:+','MEM',null,'op']],
+    [['ENTER','enter','ENTRY','entry','enter']]
+  ];
+  $('keys').innerHTML=K.map(function(row,ri){ return '<div class="kr'+(ri===8?' last':'')+'">'+row.map(function(k,ci){ return '<button type="button" class="k '+k[4]+'" data-r="'+ri+'" data-c="'+ci+'">'+(k[2]?'<s>'+k[2]+'</s>':'<s>&nbsp;</s>')+'<span>'+k[0]+'</span></button>'; }).join('')+'</div>'; }).join('');
+  $('keys').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    var k=K[+b.dataset.r][+b.dataset.c];
+    if(k[1]==='2nd'){ setSecond(!second); return; }
+    var act=second?k[3]:k[1];
+    if(second&&!k[3]){ setSecond(false); if(k[2]) toast(k[2]+' is not available in this version'); return; }
+    setSecond(false); run(act);
+  });
+  function insert(s){
+    if(pane==='yeq'||(pane!=='home'&&document.activeElement&&document.activeElement.tagName==='INPUT'&&$('calc').contains(document.activeElement))){
+      var inp=pane==='yeq'?($('pY').querySelectorAll('input')[yFocus<0?0:yFocus]):document.activeElement;
+      if(inp){ var a=inp.selectionStart==null?inp.value.length:inp.selectionStart, z=inp.selectionEnd==null?a:inp.selectionEnd; inp.value=inp.value.slice(0,a)+s+inp.value.slice(z); inp.selectionStart=inp.selectionEnd=a+s.length; inp.dispatchEvent(new Event('input')); }
+      return;
+    }
+    if(pane!=='home'){ menu=null; show('home'); }
+    if(entry===''&&hist.length&&(/^[+×÷^²!*/-]$/.test(s)||s==='⁻¹')) entry='Ans';
+    entry+=s; drawHome();
+  }
+  var TOKS=['sin⁻¹(','cos⁻¹(','tan⁻¹(','sin(','cos(','tan(','log(','ln(','√(','abs(','10^(','e^(','Ans','⁻¹'];
+  function run(a){
+    if(!a) return;
+    if(a.indexOf('i:')===0){
+      if(pane==='menu'&&/^i:\d$/.test(a)){ pick(+a.slice(2)-1); return; }
+      if(pending&&pending.type==='value'&&$('vX')){ var v=$('vX'); v.value+=a.slice(2).replace('−','-').replace('×','*').replace('÷','/'); return; }
+      insert(a.slice(2)); return;
+    }
+    switch(a){
+      case 'yeq': trace=null; pending=null; show('yeq'); break;
+      case 'win': show('win'); break;
+      case 'tblset': show('table'); setTimeout(function(){ var t=$('tS'); if(t) t.focus(); },0); break;
+      case 'zoom': openMenu('ZOOM',ZOOM); break;
+      case 'calc': openMenu('CALCULATE',CALC); break;
+      case 'trace': startTrace(); break;
+      case 'graph': pending=null; show('graph'); break;
+      case 'table': show('table'); break;
+      case 'mode': ST.deg=!ST.deg; setMode(); save(); toast(ST.deg?'DEGREE mode':'RADIAN mode'); if(pane==='graph') drawGraph(); if(pane==='table') drawT(); break;
+      case 'quit': trace=null; pending=null; menu=null; show('home'); break;
+      case 'del':
+        if(pane==='home'){ var t=TOKS.filter(function(x){return entry.slice(-x.length)===x;})[0]; entry=entry.slice(0,-(t?t.length:1)); drawHome(); }
+        else if(pane==='yeq'){ var inp=$('pY').querySelectorAll('input')[yFocus<0?0:yFocus]; inp.value=inp.value.slice(0,-1); inp.dispatchEvent(new Event('input')); }
+        break;
+      case 'clear':
+        if(pane==='home'){ if(entry) entry=''; else hist=[]; drawHome(); }
+        else if(pane==='yeq'){ var inp2=$('pY').querySelectorAll('input')[yFocus<0?0:yFocus]; inp2.value=''; inp2.dispatchEvent(new Event('input')); }
+        else { trace=null; pending=null; menu=null; show('home'); }
+        break;
+      case 'enter':
+        if(pane==='home') evalEntry();
+        else if(pane==='yeq'){ yFocus=(yFocus+1)%4; $('pY').querySelectorAll('input')[yFocus].focus(); }
+        else if(pane==='menu') pick(0);
+        else if(pending&&$('vGo')) $('vGo').click();
+        else if(pane==='win'||pane==='table'){ var ae=document.activeElement; if(ae&&ae.tagName==='INPUT') ae.dispatchEvent(new Event('change')); }
+        break;
+      case 'entry': if(pane!=='home') show('home'); entry=last; drawHome(); break;
+      case 'left': if(trace) traceKey('l'); break;
+      case 'right': if(trace) traceKey('r'); break;
+    }
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.ctrlKey||e.metaKey||e.altKey) return;
+    var r=$('calc').getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight) return;
+    var t=e.target, inField=t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT');
+    if(inField){ if(e.key==='Escape'){ t.blur(); } return; }
+    var k=e.key;
+    if(pane==='graph'&&trace&&/^Arrow/.test(k)){ e.preventDefault(); traceKey({ArrowLeft:'l',ArrowRight:'r',ArrowUp:'u',ArrowDown:'d'}[k]); return; }
+    if(k==='Enter'){ e.preventDefault(); run('enter'); return; }
+    if(k==='Backspace'){ e.preventDefault(); run('del'); return; }
+    if(k==='Escape'){ run('clear'); return; }
+    if(pane==='menu'&&/^[1-9]$/.test(k)){ pick(+k-1); return; }
+    var map={'*':'×','/':'÷'};
+    if(/^[0-9.+\-*/^()!]$/.test(k)){ e.preventDefault(); insert(map[k]||k); return; }
+    if(k==='x'||k==='X'){ insert('X'); return; }
+    if(pane==='home'&&/^[a-zA-Z]$/.test(k)){ insert(k); return; }
+  });
+
+  var hb=document.querySelector('.hamb'), nav=document.querySelector('.nav');
+  hb.addEventListener('click',function(){ var o=nav.classList.toggle('open'); hb.setAttribute('aria-expanded',o); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ nav.classList.remove('open'); hb.setAttribute('aria-expanded','false'); }); });
+
+  setMode(); show('home');
+})();
+
+</script>
+</body>
+</html>
